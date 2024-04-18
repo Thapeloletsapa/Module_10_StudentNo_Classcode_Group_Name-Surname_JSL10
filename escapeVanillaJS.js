@@ -39,7 +39,7 @@ function findMostRecentBook(books) {
 }
 
 function findIntersection(setA, setB) {
-    // 🪲 Bug: Incorrect logic
+    // 🪲 Bug fix: use correct logic
     const intersection = new Set();
     for (let item of setA){
       if (setB.has(item)){
@@ -51,7 +51,7 @@ function findIntersection(setA, setB) {
 
 async function navigateLabyrinth(directions) {
     for (let direction of directions) {
-        // 🪲 Bug: No delay
+        // 🪲 Bug fix: Add await for delay
         await new Promise(resolve => setTimeout(resolve, 1000));
         console.log(`Navigating: ${direction.step}`);
     }
